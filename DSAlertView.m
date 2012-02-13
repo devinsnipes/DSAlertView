@@ -8,7 +8,7 @@
 
 #import "DSAlertView.h"
 
-@interface DSAlertView
+@interface DSAlertView (Private)
 
 - (void) drawRoundedRect:(CGRect) rect inContext:(CGContextRef) 
 context withRadius:(CGFloat) radius;
