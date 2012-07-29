@@ -1,18 +1,19 @@
-Thanks for downloading. This class file was not originally mine, but I have fixed various objects that were not working with Apple's iOS 5 update.
+Thanks for downloading. This class file wasn't originally mine, but due to the original developer's lack of support, I've decided to take over! 
 
 In your project header, import DSAlertView
 
-wherever you're going to add the custom alert code, be sure to initialize it like this: 
+wherever you're going to add the custom alert code, be sure to initialize it as: 
 
-[[[[DSAlertView alloc] initWithTitle:@"YOUR_TITLE_HERE" 
-                                 message:@YOUR_MESSAGE_HERE" 
+[[[DSAlertView alloc] initWithTitle:@"YOUR_TITLE_HERE" 
+                                 message:@"YOUR_MESSAGE_HERE" 
                                 delegate:self //this never changes
                        cancelButtonTitle:@"YOUR_BUTTON_TITLE_HERE" 
-                       otherButtonTitles:@"OPTIONAL_BUTTON_TITLE",nil] autorelease] show];
+                       otherButtonTitles:@"OPTIONAL_BUTTON_TITLE",nil] show];
 
 
 If you find this project useful, please follow me on Twitter @djs.
 
-Thanks,
+I also answer support questions & answer support on Twitter or via email devinsnipes@me.com
+
 
 Hope you enjoy.

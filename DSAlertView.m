@@ -2,7 +2,7 @@
 //  DSAlertView.m
 //  
 //
-//  Created by Devin Snipes on 1/2/12.
+//  Created by Devin Snipes on 7/12/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -15,23 +15,18 @@ context withRadius:(CGFloat) radius;
 
 @end
 
-static UIColor *fillColor = nil;
-static UIColor *borderColor = nil;
+static UIColor *fillColor, *borderColor = nil;
 
 @implementation DSAlertView
 
 -(void)setBackgroundColor:(UIColor *)BG withStrokeColor:(UIColor *) setStroke;
 
 {
-	if(fillColor != nil)
-	{
-		[fillColor release];
-		[borderColor release];
-	}
     
-	fillColor = [BG retain];
-	borderColor = [setStroke retain];
+	fillColor = BG;
+	borderColor = setStroke;
 }
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -39,11 +34,10 @@ static UIColor *borderColor = nil;
 	{
         if(fillColor == nil)
 		{
-            //Add colorWithRed or colorWithHue to design your alert.
-            fillColor = [[UIColor colorWithRed:0.817 green:0.000 blue:0.000 alpha:1.000] retain];
-			borderColor = [[UIColor colorWithHue:0.625 
-                                      saturation:0.0 brightness:0.8 alpha:0.8] 
-                           retain];
+            /*Adjust the following methods &
+            use to define your fill & border colors for the alert*/
+            fillColor = [UIColor blackColor];
+			borderColor = [UIColor yellowColor];
 		}
     }
     
@@ -138,9 +132,5 @@ static UIColor *borderColor = nil;
 	CGContextClosePath(context);
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 @end
